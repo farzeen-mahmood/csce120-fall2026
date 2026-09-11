@@ -174,6 +174,18 @@ void SepiaImage(std::vector<std::vector<Pixel> >& image) {
   std::cout << "Making sepia image... " << std::endl;
   std::cout << "  ... TBD" << std::endl;
   // TODO(Student)
+
+  for (unsigned int row = 0; row < image.size(); ++row) {
+    for (unsigned int col = 0; col < image.at(row).size(); ++col) {
+      unsigned int og_red = image.at(row).at(col).r;
+      unsigned int og_green = image.at(row).at(col).g;
+      unsigned int og_blue = image.at(row).at(col).b;
+
+      image.at(row).at(col) = {0.393 * og_red + 0.768 * og_green + 0.189 * og_blue,
+                               0.349 * og_red + 0.686 * og_green + 0.168 * og_blue,
+                               0.272 * og_red + 0.534 * og_green + 0.131 * og_blue};
+    }
+  }
 }
 
 
@@ -188,4 +200,13 @@ void InvertImage(std::vector<std::vector<Pixel> >& image) {
   std::cout << "Making invert image... " << std::endl;
   std::cout << " ... TBD" << std::endl;
   // TODO(Student)
+  for (unsigned int row = 0; row < image.size(); ++row) {
+    for (unsigned int col = 0; col < image.at(row).size(); ++col) {
+      unsigned int og_red = image.at(row).at(col).r;
+      unsigned int og_green = image.at(row).at(col).g;
+      unsigned int og_blue = image.at(row).at(col).b;
+
+      image.at(row).at(col) = {255 - og_red, 255 - og_green, 255 - og_blue};
+    }
+  }
 }
