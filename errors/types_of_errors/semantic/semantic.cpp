@@ -3,15 +3,15 @@
 // three errors
 
 int main() {
-  unsigned int age;
+  unsigned int age; // should be initialized to 0
   std::cout << "Age when born: " << age << std::endl;
 
   std::cout << "Enter your age: ";
   std::cin >> age;
 
-  if (12 < age || age < 20) {
+  if (12 < age || age < 20) { // should be &&, not ||
     std::cout << "You are a teenager." << std::endl;
-  } else if (age > 21) {
+  } else if (age > 21) { // should be >=, not >
     std::cout << "You can vote." << std::endl;
   }
 

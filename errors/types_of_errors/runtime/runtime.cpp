@@ -9,7 +9,7 @@ int main() {
 
     if (12 < age && age < 20) {
       std::cout << "You are a teenager." << std::endl;
-    } else if (age = 21) {
+    } else if (age = 21) { // wrong operator; should be ==, not =
       std::cout << "You can vote." << std::endl;
     }
     std::cout << "Your age times " << (100 / age)
