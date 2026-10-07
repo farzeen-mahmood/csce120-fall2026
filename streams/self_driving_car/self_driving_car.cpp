@@ -50,8 +50,6 @@ int main() {
     std::ifstream radar_file;
 
     std::filesystem::path PATH = std::filesystem::current_path();
-    std::cout << PATH << std::endl;
-    
     lidar_file.open(PATH / "lidar.txt");
     camera_file.open(PATH / "camera.txt");
     radar_file.open(PATH / "radar.txt");
